@@ -9,7 +9,7 @@ jobs:
         python-version:
           - cp38-cp38
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Set target Python version PATH
         run: echo "::add-path::/opt/python/${{ matrix.python-version }}/bin"
       - name: setup script
