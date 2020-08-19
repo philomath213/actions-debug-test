@@ -15,4 +15,4 @@ jobs:
       - name: setup script
         run: .github/workflows/scripts/setup.sh
       - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v2
+        uses: mxschmitt/action-tmate@v1
