@@ -7,6 +7,11 @@ curl https://github.com/Kitware/CMake/releases/download/v3.17.1/cmake-3.17.1-Lin
 echo "::add-path::/opt/cmake-3.17.1-Linux-x86_64/bin"
 
 
+# check python version
+which python
+python -V
+
+
 # install python dependencies
 python -m pip install --upgrade pip
 pip install setuptools wheel twine auditwheel
