@@ -10,6 +10,8 @@ jobs:
           - cp38-cp38
     steps:
       - uses: actions/checkout@v2
+      - name: Set target Python version PATH
+        run: echo "::add-path::/opt/python/${{ matrix.python-version }}/bin"
       - name: setup script
         run: ./scripts/setup.sh
       - name: Setup tmate session
