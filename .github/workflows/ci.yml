@@ -3,7 +3,14 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: quay.io/pypa/manylinux2010_x86_64
+    strategy:
+      matrix:
+        python-version:
+          - cp38-cp38
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+      - uses: actions/checkout@v2
+      - name: setup script
+        run: ./scripts/setup.sh
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v2
