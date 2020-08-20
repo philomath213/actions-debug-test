@@ -14,5 +14,5 @@ jobs:
         run: echo "::add-path::/opt/python/${{ matrix.python-version }}/bin"
       - name: setup script
         run: .github/workflows/scripts/setup.sh
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v1
+      - name: test cmake
+        run: which cmake; cmake --version
