@@ -16,3 +16,5 @@ jobs:
         run: .github/workflows/scripts/setup.sh
       - name: test cmake
         run: which cmake; cmake --version
+      - name: test protobuf
+        run: which protoc; protoc --version
